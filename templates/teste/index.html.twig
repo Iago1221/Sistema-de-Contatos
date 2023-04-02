@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teste Magazord{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <section class="contatos">
+        <div class="example-wrapper">
+            <h1>Contatos</h1>
+
+
+        {% if msg_remove_contato is not empty %}
+        <div class="alert alert-success">
+            {{ msg_remove_contato }}
+        </div>
+        {% endif %}
+
+        <a href="teste/create_contato" class="btn btn-dark mb-3">Adicionar</a>
+            <ul class="list-group">
+            {% for pessoa in pessoas_rep %}
+                {%for contato in contatos_rep %}
+                    {% if contato.pessoa_id is same as pessoa.id %}
+                        <li class="list-group-item">
+                            <label>{{ pessoa.name }}</label>
+                            <br>
+                            <label>contato: {{ contato.contact }}</label>
+                            <form method="post" action="teste/contato_delete/{{ contato.id }}">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button style="color: #FFF; background-color: red; float: right">X</button>
+                            </form>
+                            <a href="teste/edit_contato/{{ contato.id }}" style="float: right; margin-right: 5px"><i class="fa-solid fa-pencil"></i></a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section class="pessoas">
+        <div class="example-wrapper">
+            <h1>Pessoas</h1>
+
+
+        {% if msg_remove_pessoa is not empty %}
+        <div class ="alert alert-success">
+            {{ msg_remove_pessoa }}
+        </div>
+        {% endif %}
+
+        <a href="teste/create_pessoa" class="btn btn-dark mb-3">Adicionar</a>
+            <ul class="list-group">
+                {% for pessoa in pessoas_rep %}
+                    <li class="list-group-item">
+                        <label>{{ pessoa.name }}</label>
+                         <br>
+                        <label>cpf: {{ pessoa.cpf }}</label>
+                        <form method="post" action="teste/pessoa_delete?id={{ pessoa.id }}">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button style="color: #FFF; background-color: red; float: right;">X</button>
+                        </form>
+                        <a href="teste/edit_pessoa/{{ pessoa.id }}" style="float: right; margin-right: 5px"><i class="fa-solid fa-pencil"></i></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="https://kit.fontawesome.com/f1e18a8a64.js" crossorigin="anonymous"></script>
+{% endblock %}

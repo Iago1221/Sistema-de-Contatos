@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teste Magazord{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <section class="contatos">
+        <div class="example-wrapper">
+            <ul class="list-group">
+            {% for pessoa in pessoas_rep %}
+                {%for contato in contatos_rep %}
+                    {% if contato.pessoa_id is same as pessoa.id %}
+                        {% if input == pessoa.name %}
+                            <li class="list-group-item">
+                                <label>{{ pessoa.name }}</label>
+                                <br
+                                <label>cpf: {{ pessoa.cpf }}</label>
+                                <br>
+                                <label>contato: {{ contato.contact }}</label>
+                                <form method="post" action="contato_delete/{{ contato.id }}">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button style="color: #FFF; background-color: red; float: right">X</button>
+                                </form>
+                                <a href="edit_contato/{{ contato.id }}" style="float: right; margin-right: 5px"><i class="fa-solid fa-pencil"></i></a>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="https://kit.fontawesome.com/f1e18a8a64.js" crossorigin="anonymous"></script>
+{% endblock %}

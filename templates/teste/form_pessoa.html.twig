@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teste Magazord{% endblock %}
+
+{% block body %}
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/teste/?p=contatos">Contatos</a></li>
+                <li class="nav-item dropdown"><a class="nav-link" href="/teste/?p=pessoas">Pessoas</a></li>
+            </ul>
+
+            <form method="POST" action="search">
+                <input type="search" id="pesquisa" list="data_pessoas"> 
+                <datalist id="data_pessoas">
+                    {% for pessoa in pessoas_rep %}
+                        <option value="{{ pessoa.name }}" id="{{ pessoa.id }}">{{ pessoa.name }}</option>
+                    {% endfor %}
+                </datalist>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+    <form method="POST" autocomplete="off" style="margin-top: 10px">
+        <div class="container" style='border: solid 2px #ccc'>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Digite o nome</label>
+                <input class="form-control" type="text" id="nome" name="nome" placeholder="nome" required>
+                <label for="cpf" class="form-label">Digite o CPF</label>
+                <input class="form-control" type="number" id="cpf" name="cpf" placeholder="CPF" minlength="11" maxlength="11" required>
+            </div>
+            <div>
+                <button type="submit" style="background-color: darkgreen; color: #FFF">Adicionar</button>
+                <button type="button"><a href="/teste/?p=pessoas" style="text-decoration: none; color: black">Cancelar</a></button>
+            </div>
+        </div>
+    </form>
+    <script src="https://kit.fontawesome.com/f1e18a8a64.js" crossorigin="anonymous"></script>
+{% endblock %}

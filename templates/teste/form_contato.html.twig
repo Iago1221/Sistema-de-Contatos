@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teste Magazord{% endblock %}
+
+{% block body %}
+
+    <form method="POST" autocomplete="off" style="margin-top: 10px">
+        <div class="container" style='border: solid 2px #ccc'>
+            <div class="mb-3">
+                <label for="select_pessoa" class="form-label">Selecione a pessoa que você quer adicionar o contato</label>
+                <br>
+                <select class="select_pessoa" name="select_pessoa" value="invalido" style="width: 350px" required>
+                    {% for pessoa in pessoas_rep %}
+                        <option value="{{ pessoa.id }}">{{ pessoa.name }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <label for="type_contato" class="form-label">Selecione o tipo de contato</label>
+                <br>
+                <select class="type_contato" name="type_contato">
+                    <option value="email">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                </select>
+                <br>
+                <br>
+                <label for="contato" class="form-label">Digite o contato</label>
+                <input class="form-control" type="text" id="contato" name="contato" placeholder="Digite aqui o contato" required>
+            </div>
+            <div>
+                <button type="submit" id="env_form_contatos" style="background-color: darkgreen; color: #FFF">Adicionar</button>
+                <button type="button"><a href="/teste/?p=contatos" style="text-decoration: none; color: black">Cancelar</a></button>
+            </div>
+        </div>
+    </form>
+    <script src="https://kit.fontawesome.com/f1e18a8a64.js" crossorigin="anonymous"></script>
+{% endblock %}
