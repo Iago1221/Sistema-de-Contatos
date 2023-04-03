@@ -13,3 +13,27 @@ Sistema de contatos que permite adicionar pessoas, adicionar contatos para estas
 - `Funcionalidade 5`: excluir pessoas e seus contatos
 - `Funcionalidade 6`: excluir contatos
 - `Funcionalidade 7`: pesquisar através do nome das pessoas
+
+# Abrir e rodar o projeto
+Após baixar o projeto, é necessário fazer algumas alterações:
+- É necessário utilizar a framework Symfony e também o Composer
+- É necessário ter o node.js instalado em sua máquina
+- É necessário importar o bootstrap para o projeto através do node.js
+
+É importante salientar também, que o projeto utiliza um arquivo .env.local, com as informações para criar sessões com o banco de dados, para não passar tais informações para o repositório no GitHub.
+
+# Técnicas e tecnologias utilizadas
+- Padrão MVC
+- PHP
+- JavaScript
+- HTML
+- TWIG
+- Framework Symfony
+- DOCTRINE ORM
+- SCSS
+- CSS
+- SQLite
+- Composer
+
+# Autor
+!Iago Oliveira (https://user-images.githubusercontent.com/121733319/229388090-40e60268-40e1-4a5c-9fb9-49ddb794f537.jpeg)
