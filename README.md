@@ -36,7 +36,7 @@ Após baixar o projeto, é necessário fazer algumas alterações:
 - Composer
 
 # Autor
-| ![Imagem do autor]<img src="[https://avatars.githubusercontent.com/u/37356058?v=4](https://user-images.githubusercontent.com/121733319/229389078-679dbb20-ac0b-4db1-862c-f5ad5f8f3d8e.jpeg)" width=115> |
+| ![Imagem do autor][<img src="[https://avatars.githubusercontent.com/u/37356058?v=4](https://user-images.githubusercontent.com/121733319/229389078-679dbb20-ac0b-4db1-862c-f5ad5f8f3d8e.jpeg)" width=115>] |
 
 | Iago Oliveira | 
 
