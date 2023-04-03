@@ -37,5 +37,6 @@ Após baixar o projeto, é necessário fazer algumas alterações:
 
 # Autor
 ![Imagem do autor](https://user-images.githubusercontent.com/121733319/229389078-679dbb20-ac0b-4db1-862c-f5ad5f8f3d8e.jpeg)
+
 Iago Oliveira
 
