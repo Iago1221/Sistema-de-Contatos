@@ -30,6 +30,7 @@ Após baixar o projeto, é necessário fazer algumas alterações:
 - É necessário utilizar a framework Symfony e também o Composer
 - É necessário ter o node.js instalado em sua máquina
 - É necessário importar o bootstrap para o projeto através do node.js
+- É necessário criar as tabelas mapeadas pelo doctrine em um banco de dados
 
 É importante salientar também, que o projeto utiliza um arquivo .env.local, com as informações para criar sessões com o banco de dados, para não passar tais informações para o repositório no GitHub.
 
