@@ -1,4 +1,15 @@
-﻿# Sistema-de-Contatos
+﻿# Sistema de Contatos
+ 
+ # Índice 
+
+* [Sistema de contatos](#Sistema-de-Contatos)
+* [Índice](#índice)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Funcionalidades](#funcionalidades)
+* [Abrir e rodar o projeto](#Abrir-e-rodar-o-projeto)
+* [Técnicas e tecnologias utilizadas](#Técnicas-e-tecnologias-utilizadas)
+* [Autor do Projeto](#autor)
+
 
 # Descrição do projeto
 Sistema de contatos que permite adicionar pessoas, adicionar contatos para estas pessoas, seja do tipo E-mail ou Telefone e permite também pesquisar os contatos através das pessoas cadastradas.
